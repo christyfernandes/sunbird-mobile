@@ -47,7 +47,8 @@ import Driver from 'driver.js';
 import { AppVersion } from '@ionic-native/app-version';
 import { updateFilterInSearchQuery } from '../../util/filter.util';
 import { TelemetryGeneratorService } from '../../service/telemetry-generator.service';
-import { CommonUtilService } from '../../service/common-util.service';
+import { CommonUtilService } from '@app/service';
+import {StyleGuideComponent } from '@app/component';
 
 @Component({
   selector: 'page-resources',
@@ -676,5 +677,9 @@ export class ResourcesPage implements OnInit, AfterViewInit {
 
   showDisabled(resource) {
     return !resource.isAvailableLocally && !this.commonUtilService.networkInfo.isNetworkAvailable;
+  }
+
+  showStyleGuide() {
+    this.navCtrl.push(StyleGuideComponent);
   }
 }

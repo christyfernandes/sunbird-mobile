@@ -13,6 +13,9 @@
 			<button ion-button icon-only (click)="showFilter()">
 				<img [src]="filterIcon" class="tool-icon" float-end />
 			</button>
+			<button ion-button icon-only (click)="showStyleGuide()">
+				<ion-icon ios="ios-construct" md="md-construct"></ion-icon>
+			</button>
 		</ion-buttons>
 	</ion-navbar>
 	<div *ngIf="showWarning" class="offline-message">
@@ -27,7 +30,7 @@
 	<!-- onBoardingSLides ends here -->
 	<!-- <div> -->
 
-	<!-- <div class="course-scroll-holder" [ngClass]="{'empty-saved-resources' : (localResources && localResources.length === 0 || showLoader)}"
+	<div class="course-scroll-holder" [ngClass]="{'empty-saved-resources' : (localResources && localResources.length === 0 || showLoader)}"
 	 *ngIf="localResources && localResources.length">
 		<div class="item padding-11">
 			<span float-start class="scroll-heading">{{ 'SAVED_RESOURCES' | translate }}</span>
@@ -106,47 +109,5 @@
 	</div>
 	<div *ngIf="showSignInCard" class="signin-card-bg">
 		<sign-in-card (valueChange)="showOfflineNetworkWarning($event)" [source]="source"></sign-in-card>
-	</div> -->
-	<ion-grid>
-		<ion-row>
-			<ion-col col-12 class="P20" style="background:#fff;">
-				<button ion-button class="medium-pill active">English medium</button>
-				<button ion-button class="medium-pill">Kannada Medium</button>
-			</ion-col>
-		</ion-row>
-
-		<ion-row>
-			<ion-col col-12 class="">
-				<button ion-button class="class-pill active">Class 5</button>
-				<button ion-button class="class-pill">Class 6</button>
-				<button ion-button class="class-pill">Class 7</button>
-				<button ion-button class="class-pill">Class 8</button>
-			</ion-col>
-		</ion-row>
-
-		<section>
-			<div class="section-floating P15">
-				<h2 class="heading">Recently Viewed
-					<!-- <button ion-button class="class-pill float-end">Class 6</button> -->
-				</h2>
-				<ion-row class="card-container">
-					<div class="card">
-						<div class="left">
-							<ion-icon ios="ios-cloud" md="md-cloud"></ion-icon>
-						</div>
-						<div class="right">
-							<ion-row>
-								<h2> Great thinkers and their new religions</h2>
-							</ion-row>
-							<ion-row>
-								<span>Class6</span>
-								<span>Social Science</span>
-							</ion-row>
-
-						</div>
-					</div>
-				</ion-row>
-			</div>
-		</section>
-	</ion-grid>
+	</div>
 </ion-content>

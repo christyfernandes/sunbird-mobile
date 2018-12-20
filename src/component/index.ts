@@ -13,3 +13,4 @@ export * from './sign-in-card/sign-in-card';
 export * from './view-credits/view-credits';
 export * from './view-more-card/view-more-card';
 export * from './bookmark/bookmark';
+export * from './style-guide/style-guide';
