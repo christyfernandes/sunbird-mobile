@@ -3,6 +3,7 @@ import { IonicPageModule } from 'ionic-angular';
 import { ResourcesPage } from './resources';
 import { TranslateModule } from '@ngx-translate/core';
 import { ComponentsModule } from '../../component/components.module';
+import { DirectivesModule} from '../../directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { ComponentsModule } from '../../component/components.module';
   imports: [
     IonicPageModule.forChild(ResourcesPage),
     TranslateModule.forChild(),
-    ComponentsModule
+    ComponentsModule,
+    DirectivesModule
   ],
   exports: [
     ResourcesPage

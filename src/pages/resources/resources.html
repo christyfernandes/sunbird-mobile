@@ -1,6 +1,6 @@
-<ion-header class="sb-header">
+<ion-header class="sb-header" #head>
 	<ion-navbar class="sb-header-navbar" #content>
-		<!-- <ion-toolbar class="sb-header-toolbar"> -->
+		<ion-toolbar class="sb-header-toolbar">
 		<ion-buttons class="sb-hamburger" start>
 			<button class="sb-hamburger-menu sb-hamburger-icon" ion-button icon-only menuToggle>
 				<ion-icon name="menu"></ion-icon>
@@ -17,7 +17,7 @@
 				<ion-icon name="search"></ion-icon>
 			</button>
 		</ion-buttons>
-		<!-- </ion-toolbar> -->
+		</ion-toolbar>
 	</ion-navbar>
 </ion-header>
 <ion-menu [content]="content" class="sb-side-menu" persistent="true">
@@ -61,7 +61,8 @@
 		Version V1.12.27
 	</ion-footer>
 </ion-menu>
-<ion-content  class = "main-container">
+  @Input('scrollElement') scrollElement: any;
+  <ion-content  class = "main-container" #scrollArea [footerElement]="myTabs" [scrollElement]="scrollArea" hide-header [header]="head">
 	<div ion-fixed class = "fixed-container">
 		<div class="sb-slider-pills-container">
 			<div class="sb-pills-container sb-medium-pills-container">
